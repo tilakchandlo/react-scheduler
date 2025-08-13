@@ -47,11 +47,12 @@ const Topbar: FC<TopbarProps> = ({ width, showThemeToggle, toggleTheme }) => {
       <Filters>
         {filterButtonState >= 0 && (
           <IconButton
-            variant={filterButtonState ? "filled" : "outlined"}
+            $variant={filterButtonState ? "filled" : "outlined"}
             iconName="filter"
             width="16"
             height="16"
-            onClick={handleFilterData}>
+            onClick={handleFilterData}
+          >
             {topbar.filters}
             {!!filterButtonState && (
               <span onClick={handleClearFilters}>
@@ -90,14 +91,14 @@ const Topbar: FC<TopbarProps> = ({ width, showThemeToggle, toggleTheme }) => {
           <IconButton
             isDisabled={!isPrevZoom}
             onClick={zoomOut}
-            isFullRounded
+            $isFullRounded
             iconName="subtract"
             width="14"
           />
           <IconButton
             isDisabled={!isNextZoom}
             onClick={zoomIn}
-            isFullRounded
+            $isFullRounded
             iconName="add"
             width="14"
           />

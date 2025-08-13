@@ -253,7 +253,8 @@ const CalendarProvider = ({
         updateTilesCoords,
         recordsThreshold: maxRecordsPerPage,
         onClearFilterData
-      }}>
+      }}
+    >
       {children}
     </Provider>
   );
