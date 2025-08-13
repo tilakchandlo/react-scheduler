@@ -30,6 +30,7 @@ const Scheduler = ({
       translations: undefined,
       dateFormat: "dddd DD.MM.YYYY",
       timeFormat: "HH:00",
+      customTooltip: undefined,
       ...config
     }),
     [config]
