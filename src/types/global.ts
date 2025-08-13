@@ -54,6 +54,8 @@ export type Config = {
   dateFormat?: string;
   timeFormat?: string;
   customTooltip?: CustomTooltipFunction;
+  minZoom?: (typeof allZoomLevel)[number];
+  maxZoom?: (typeof allZoomLevel)[number];
 };
 
 export type CustomTooltipFunction = (tooltipData: TooltipData) => JSX.Element | string;
