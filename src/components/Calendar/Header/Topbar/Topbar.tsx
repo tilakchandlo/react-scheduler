@@ -51,8 +51,7 @@ const Topbar: FC<TopbarProps> = ({ width, showThemeToggle, toggleTheme }) => {
             iconName="filter"
             width="16"
             height="16"
-            onClick={handleFilterData}
-          >
+            onClick={handleFilterData}>
             {topbar.filters}
             {!!filterButtonState && (
               <span onClick={handleClearFilters}>
@@ -72,6 +71,7 @@ const Topbar: FC<TopbarProps> = ({ width, showThemeToggle, toggleTheme }) => {
           <DatePicker
             selected={new Date()}
             onSelect={(date) => handleGoDate(dayjs(date))}
+            shouldCloseOnSelect={true}
             customInput={
               <NavCalendarButton>
                 <Icon iconName="calendar" height="15" fill={colors.textPrimary} />

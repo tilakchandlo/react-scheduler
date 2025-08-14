@@ -9,11 +9,11 @@ import { Scheduler } from ".";
 
 function App() {
   const [values, setValues] = useState<ConfigFormValues>({
-    peopleCount: 15,
-    projectsPerYear: 5,
+    peopleCount: 5,
+    projectsPerYear: 2,
     yearsCovered: 0,
-    startDate: undefined,
-    maxRecordsPerPage: 50,
+    startDate: new Date().toDateString(),
+    maxRecordsPerPage: 10,
     isFullscreen: true
   });
 
@@ -69,7 +69,8 @@ function App() {
           config={{
             zoom: 0,
             maxRecordsPerPage: maxRecordsPerPage,
-            showThemeToggle: true
+            showThemeToggle: true,
+            maxZoom: 1
           }}
           onItemClick={(data) => console.log("clicked: ", data)}
         />
